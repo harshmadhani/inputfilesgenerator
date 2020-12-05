@@ -1,3 +1,5 @@
+package com.harshmadhani;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -20,15 +22,15 @@ public class FilesGenerator {
         Collections.shuffle(numbers);
 
         try {
-            FileWriter fileWriter = new FileWriter("file.txt");
+            FileWriter fileWriter = new FileWriter("inputfile.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter, 32678);
             ListIterator listIterator = numbers.listIterator();
 
             while(listIterator.hasNext()) {
                 bufferedWriter.write(listIterator.next() + "\n");
             }
-            fileWriter.close();
             bufferedWriter.close();
+            fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
