@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  Running unit tests:
+  Running_unit-tests:
     runs-on:  ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,7 +17,7 @@ jobs:
           java-version: 1.8
       - name: Run unit tests with Maven
         run: mvn test
-  Building executable jar:
+  Building_executable_jar:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
